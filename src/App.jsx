@@ -8,7 +8,7 @@ import MainLastText from './features/main/mainLastText';
 import ContactSection from './features/footer/contactSection';
 import FooterSection from './features/footer/footerSection';
 import CreateAccount from './Components/createAccount';
-import SignIn from './Components/signin';
+import SignIn from './Components/SignIn';
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
