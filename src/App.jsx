@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import NavBarLogo from './features/navbar/navBarLogo';
-import NavBarItem from './features/navbar/navBarItem';
+import NavBarLogo from './features/navbar/navbarlogo';
+import NavBarItem from './features/navbar/navbaritem';
 import RightText from './features/main/righttext';
 import LeftText from './features/main/lefttext';
 import Cards from './features/main/cards/cards';
