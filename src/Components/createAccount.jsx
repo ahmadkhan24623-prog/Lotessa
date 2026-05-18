@@ -52,13 +52,13 @@ const CreateAccount = ({ setView }) => {
             <p className="text-sm text-slate-500">
               Already have an account?{' '}
               {/* TRIGGER HOME VIEW SWITCH */}
-              <button 
-                type="button"
-                onClick={() => setView('home')} 
-                className="text-[#2EC4B6] font-semibold hover:underline bg-transparent border-none p-0 cursor-pointer inline"
-              >
-                Sign In
-              </button>
+             <button 
+  type="button"
+  onClick={() => setView('signin')}  
+  className="text-[#2EC4B6] font-semibold hover:underline bg-transparent border-none p-0 cursor-pointer inline"
+>
+  Sign In
+</button>
             </p>
           </div>
 
