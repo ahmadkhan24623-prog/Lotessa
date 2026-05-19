@@ -2,7 +2,10 @@ import React from 'react';
 
 const CenterText = () => {
   return (
-    <div className="text-center max-w-4xl mx-auto pt-20 pb-12 px-4 font-sans">
+    <div 
+      id="library" 
+      className="text-center max-w-4xl mx-auto pt-20 pb-12 px-4 font-sans"
+    >
       <span className="text-emerald-500 font-bold text-xs tracking-[0.2em] uppercase block mb-4">
         Lotessa Library
       </span>

@@ -11,7 +11,6 @@ const Cards = () => {
   const rowOneRef = useRef(null);
   const rowTwoRef = useRef(null);
 
-  // Active state to track which article popup should be open
   const [activeArticle, setActiveArticle] = useState(null);
 
   useEffect(() => {

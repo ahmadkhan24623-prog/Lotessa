@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 
-// PASS setView HERE AS A PROP
 const CreateAccount = ({ setView }) => {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
@@ -42,7 +41,6 @@ const CreateAccount = ({ setView }) => {
         </div>
       </div>
 
-      {/* Right Form Input Panel */}
       <div className="w-full md:w-[55%] bg-white px-6 py-12 md:px-20 md:py-16 flex flex-col justify-center overflow-y-auto">
         <div className="max-w-md w-full mx-auto space-y-8">
           
@@ -51,7 +49,6 @@ const CreateAccount = ({ setView }) => {
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-slate-900">Create your account</h2>
             <p className="text-sm text-slate-500">
               Already have an account?{' '}
-              {/* TRIGGER HOME VIEW SWITCH */}
              <button 
   type="button"
   onClick={() => setView('signin')}  

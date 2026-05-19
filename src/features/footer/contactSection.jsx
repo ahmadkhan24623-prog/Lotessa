@@ -60,11 +60,14 @@ export default function ContactSection() {
   }, []);
 
   return (
-    <section className="bg-[#e6eae8] py-20 px-6 md:px-16 lg:px-28 font-sans selection:bg-emerald-100 overflow-hidden">
+    <section 
+      id="contact" 
+      className="bg-[#e6eae8] py-20 px-6 md:px-16 lg:px-28 font-sans selection:bg-emerald-100 overflow-hidden"
+    >
       <div className="max-w-7xl mx-auto">
         
         <div ref={headingRef} className="text-center mb-20">
-          <h1 className="text-6xl md:text-8xl lg:text-9xl  font-bold uppercase tracking-tighter text-zinc-900 ">
+          <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold uppercase tracking-tighter text-zinc-900 ">
             CONTACT US
           </h1>
         </div>
@@ -80,7 +83,7 @@ export default function ContactSection() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 
                 <div className="flex flex-col relative group/input">
-                  <label className="text-xs font-semibold  placeholder:text-black/30 text-gray-400 uppercase tracking-wider mb-1">First name</label>
+                  <label className="text-xs font-semibold placeholder:text-black/30 text-gray-400 uppercase tracking-wider mb-1">First name</label>
                   <input 
                     type="text" 
                     className="w-full bg-transparent border-b border-gray-300 py-2 focus:outline-none transition-colors duration-300"
@@ -89,10 +92,10 @@ export default function ContactSection() {
                 </div>
 
                 <div className="flex flex-col relative group/input">
-                  <label className="text-xs font-semibold  placeholder:text-black/30 text-gray-400 uppercase tracking-wider mb-1">Last name</label>
+                  <label className="text-xs font-semibold placeholder:text-black/30 text-gray-400 uppercase tracking-wider mb-1">Last name</label>
                   <input 
                     type="text" 
-                    className="w-full bg-transparent border-b  placeholder:text-black/30 border-gray-300 py-2 focus:outline-none transition-colors duration-300"
+                    className="w-full bg-transparent border-b placeholder:text-black/30 border-gray-300 py-2 focus:outline-none transition-colors duration-300"
                   />
                   <div className="absolute bottom-0 left-0 w-full h-[2px] bg-[#2fb5a5] scale-x-0 group-focus-within/input:scale-x-100 transition-transform duration-500 ease-out origin-center" />
                 </div>
@@ -110,7 +113,7 @@ export default function ContactSection() {
               <div className="pt-6">
                 <button 
                   type="submit" 
-                  className="group flex items-center gap-3 bg-[#FF6F61] text-white font-bold uppercase tracking-wider px-8 py-4 text-xs  transition-all duration-300"
+                  className="group flex items-center gap-3 bg-[#FF6F61] text-white font-bold uppercase tracking-wider px-8 py-4 text-xs transition-all duration-300"
                 >
                   <svg 
                     xmlns="http://www.w3.org/2000/svg" 
@@ -122,7 +125,7 @@ export default function ContactSection() {
                   >
                     <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                   </svg>
-                 SEND MESSAGE
+                  SEND MESSAGE
                 </button>
               </div>
             </form>

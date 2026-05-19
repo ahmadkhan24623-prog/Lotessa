@@ -67,7 +67,11 @@ function MainLastText() {
   }, []);
 
   return (
-    <div ref={containerRef} className="w-full bg-white font-sans pt-16 md:pt-24 pb-20">
+    <div 
+      id="partner" 
+      ref={containerRef} 
+      className="w-full bg-white font-sans pt-16 md:pt-24 pb-20"
+    >
       
       <div ref={headerRef} className="max-w-[1440px] mx-auto px-6 md:px-12 xl:px-16 text-center mb-16 md:mb-24">
         <span className="text-[#029664] font-bold text-xs tracking-[0.2em] uppercase block mb-4">

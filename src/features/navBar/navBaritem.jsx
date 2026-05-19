@@ -1,5 +1,9 @@
 import React from 'react';
 import Button from '../../Components/button';
+import { gsap } from 'gsap';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+
+gsap.registerPlugin(ScrollToPlugin);
 
 function NavLink({ href, label, onClick }) {
   return (
@@ -15,6 +19,21 @@ function NavLink({ href, label, onClick }) {
 }
 
 function NavBarItem({ isOpen, setIsOpen, setView }) {
+  
+  const handleScroll = (e, targetId) => {
+    e.preventDefault(); 
+    setIsOpen(false);   
+
+    gsap.to(window, {
+      duration: 1.4,      
+      scrollTo: { 
+        y: targetId, 
+        offsetY: 90         
+      }, 
+      ease: 'power4.out'    
+    });
+  };
+
   return (
     <div
       className={`
@@ -37,33 +56,41 @@ function NavBarItem({ isOpen, setIsOpen, setView }) {
       <div className="flex items-center gap-8 max-[1200px]:flex-col max-[1200px]:items-start max-[1200px]:w-full max-[1200px]:gap-0">
 
         <NavLink
-          href="#get-lotessa"
+          href="#"
           label="Get Lotessa"
-          onClick={() => setIsOpen(false)}
+          onClick={(e) => {
+            e.preventDefault();
+            setView('register');
+            setIsOpen(false);
+          }}
         />
 
         <NavLink
-          href="#community"
+          href="#"
           label="Join the Community"
-          onClick={() => setIsOpen(false)}
+          onClick={(e) => {
+            e.preventDefault();
+            setView('register');
+            setIsOpen(false);
+          }}
         />
 
         <NavLink
           href="#library"
           label="Lotessa Library"
-          onClick={() => setIsOpen(false)}
+          onClick={(e) => handleScroll(e, '#library')}
         />
 
         <NavLink
           href="#partner"
           label="Partner With Lotessa"
-          onClick={() => setIsOpen(false)}
+          onClick={(e) => handleScroll(e, '#partner')}
         />
 
         <NavLink
           href="#contact"
           label="Contact Us"
-          onClick={() => setIsOpen(false)}
+          onClick={(e) => handleScroll(e, '#contact')}
         />
 
       </div>
