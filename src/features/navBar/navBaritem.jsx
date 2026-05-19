@@ -123,6 +123,7 @@ function NavBarItem({ isOpen, setIsOpen, setView }) {
 
       </div>
     </div>
+    
   );
 }
 
