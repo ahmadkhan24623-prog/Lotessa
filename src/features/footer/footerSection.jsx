@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 
 export default function FooterSection({ setView }) {
-  // Track which modal is active: null, 'terms', 'cookies', 'privacy', or 'report'
   const [activeModal, setActiveModal] = useState(null);
 
-  // Helper to get the correct modal title
   const getModalTitle = () => {
     if (activeModal === 'terms') return 'Digital Products Terms and Conditions';
     if (activeModal === 'cookies') return 'Cookies Policy';
@@ -17,10 +15,8 @@ export default function FooterSection({ setView }) {
     <footer className="bg-[#e6eae8] mt-16 py-16 px-6 md:px-16 lg:px-28 font-sans border-t border-gray-200/50">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 
-        {/* Left Side: Brand, Buttons, and Socials */}
         <div className="space-y-8">
 
-          {/* Logo and Brand Name */}
           <div className="flex items-center gap-3">
             <img
               src="/logo/NavBarLogo.png"
@@ -78,7 +74,6 @@ export default function FooterSection({ setView }) {
           </div>
         </div>
 
-        {/* Right Side Info & Legal Links */}
         <div className="text-[#0A2240] text-[15px] md:text-[16px] leading-relaxed font-normal tracking-wide space-y-6 lg:pl-12">
           <p>
             Lotessa is <span className="font-bold underline decoration-1 underline-offset-2">not a medical device</span> and does not provide medical advice. Always consult a qualified healthcare professional regarding your health condition and treatment.
@@ -119,14 +114,12 @@ export default function FooterSection({ setView }) {
 
       </div>
 
-      {/* --- POPUP MODAL OVERLAY --- */}
+      {/* --- POPUP --- */}
       {activeModal && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm animate-fade-in">
           
-          {/* Modal Container: Shifts size dynamically based on if it's the report form or legal text */}
           <div className={`relative bg-white w-full rounded-xl shadow-2xl flex flex-col max-h-[85vh] overflow-hidden border border-gray-100 animate-slide-up ${activeModal === 'report' ? 'max-w-xl' : 'max-w-4xl'}`}>
             
-            {/* Top Header Row */}
             <div className="flex items-center justify-between px-6 py-4 border-b border-gray-100">
               <h3 className="text-xl font-bold text-[#0A2240]">{getModalTitle()}</h3>
               <button 
@@ -285,7 +278,6 @@ export default function FooterSection({ setView }) {
                     ></textarea>
                   </div>
 
-                  {/* Actions Row at bottom of Form Layout */}
                   <div className="flex justify-end gap-3 pt-4 border-t border-gray-100">
                     <button
                       type="button"
@@ -306,7 +298,6 @@ export default function FooterSection({ setView }) {
 
             </div>
 
-            {/* Bottom Close Bar for Legal Texts Only */}
             {activeModal !== 'report' && (
               <div className="flex justify-end p-4 border-t border-gray-100 bg-gray-50/50">
                 <button

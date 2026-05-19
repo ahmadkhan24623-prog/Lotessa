@@ -65,7 +65,7 @@ const Cards = () => {
       id: 1,
       category: "Featured Article",
       title: "Common Myths About GLP-1 Weight Loss Drugs & The Truths You Actually Need",
-      description: "So, you've done your homework, talked to your doctor, and maybe even decided to start a GLP-1 medication. Then the opinions start arriving... Let's sort through some of the most common myths and the truths you actually need to hear.",
+      description: "So, you've done your homework,  talked to your doctor, and maybe even decided to start a GLP-1 medication. Then the opinions start arriving. A colleague tells you it's 'basically cheating.' A family member warns you that you'll 'never be able to enjoy your favourite foods again.' And somewhere online, someone claims they 'lost 20 pounds in a month without changing a thing.' It can be hard to know what's real and what's just a story passed along without facts. Let's sort through some of the most common myths and the truths you actually need to hear. GLP-1 medications don't work like a switch you flip overnight. They help regulate appetite and blood sugar, making it easier to make consistent choices but results happen gradually over months. Slow, steady progress is not only more realistic, it's healthier for long-term...",
       readTime: "9 MIN READ"
     },
     {
